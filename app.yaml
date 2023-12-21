@@ -1,0 +1,8 @@
+runtime: python310
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  GOOGLE_CLOUD_PROJECT: "educasea"
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
